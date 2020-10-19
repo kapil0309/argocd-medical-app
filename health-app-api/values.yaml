@@ -1,0 +1,18 @@
+global:
+  ingressSubdomain: appdev-cloudnative-ocp43-6fb0b86391cd68c8282858623a1dddff-0000.eu-gb.containers.appdomain.cloud
+  tlsSecretName: appdev-cloudnative-ocp43-6fb0b86391cd68c8282858623a1dddff-0000
+
+health-app-api:
+  replicaCount: 3
+  
+  # For OpenShift set route.enabled=true
+  # For Kubernetes set route.enabled=false
+  route:
+    enabled: true
+  
+  # For OpenShift set ingress.enabled=false
+  # For Kubernetes set ingress.enabled=true
+  ingress:
+    enabled: false
+    tlsSecretName: appdev-cloudnative-ocp43-6fb0b86391cd68c8282858623a1dddff-0000
+
